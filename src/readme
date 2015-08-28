@@ -1,0 +1,27 @@
+1. 自定义工具类
+	commonUtils.uuid 用来生成一个32位的不重复的字符串，需要包的支持
+	commonUtils.toBean 从map 封装到一个类，需要包的支持
+	commonUtils 包
+		commons-beanUtils-1.8.3.jar
+		commons-logging-1.1.1.jar
+	jdbcUtils jdbc.getconnection 来从一个连接池中获得一个连接，需要包的支持
+	jdbc 包
+		c3p0-0.9.2.pre1.jar
+		mysql-connector-java.jar
+		mchange-commons-0.2.jar
+		c3p0-config.xml
+			<?xml version="1.0" encoding="UTF-8" ?>
+	<c3p0-config>
+		<default-config> 
+			<property name="jdbcUrl">jdbc:mysql://localhost:3306/goods</property>
+			<property name="driverClass">com.mysql.jdbc.Driver</property>
+			<property name="user">root</property>
+			<property name="password">123</property>
+			
+			<property name="acquireIncrement">3</property>
+			<property name="initialPoolSize">10</property>
+			<property name="minPoolSize">2</property>
+			<property name="maxPoolSize">10</property>
+		</default-config>
+	</c3p0-con
+			
